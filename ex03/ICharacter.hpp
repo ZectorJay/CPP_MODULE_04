@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 16:33:50 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 08:49:19 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/01 13:40:20 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # define BROWN "\033[1;38;2;200;60;60m"
 # define RANDOM "\033[1;38;2;90;200;90m"
 # define RESET "\033[0m"
+
+class AMateria;
 
 class ICharacter
 {

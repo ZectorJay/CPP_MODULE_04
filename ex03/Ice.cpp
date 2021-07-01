@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.hpp                                        :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/01 11:17:41 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 11:20:46 by hmickey          ###   ########.fr       */
+/*   Created: 2021/07/01 12:40:43 by hmickey           #+#    #+#             */
+/*   Updated: 2021/07/01 13:36:08 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIA_HPP
-# define MATERIA_HPP
-# include "AMateria.hpp"
+#include "Ice.hpp"
 
-// CHANGE CLASS ON ICE/CURE
-class Materia : public AMateria {
-	
-public:
+AMateria*	Ice::clone() const{	return (new Ice(*this)); }
 
-	Materia()
-};
-
-#endif
+void		Ice::useMessage( ICharacter & target ){
+	std::cout<<"* shoots an ice bolt at "<<target.getName()<<" *"<<std::endl;
+}

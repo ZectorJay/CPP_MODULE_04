@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/29 10:13:49 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 15:56:31 by hmickey          ###   ########.fr       */
+/*   Created: 2021/07/01 17:04:49 by hmickey           #+#    #+#             */
+/*   Updated: 2021/07/01 17:09:20 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef IMATERIASOURCE_HPP
-# define IMATERIASOURCE_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 # include "AMateria.hpp"
 
-class IMateriaSource {
+class Cure : public AMateria {
 
 public:
 
-	virtual ~IMateriaSource() {};
+	Cure() : AMateria("cure"){};
+	~Cure(){}
+	AMateria*	clone() const;
 
-	virtual void		learnMateria(AMateria*) = 0;
-	virtual AMateria*	createMateria(std::string const & type) = 0;
+protected:
 
+	void		useMessage ( ICharacter & target );
+	
 };
+
 
 #endif

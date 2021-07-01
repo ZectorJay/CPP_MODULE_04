@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 12:45:49 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 09:08:01 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/01 13:41:22 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,15 @@
 # include "ICharacter.hpp"
 # include "AMateria.hpp"
 
+class AMateria;
+
 class Character : public ICharacter {
 	
+public:
+
 	Character( std::string const & name );
 	~Character();
-	Character ( Character & const src );
+	Character ( Character const & src );
 
 	Character & 		operator= ( Character const & src );
 

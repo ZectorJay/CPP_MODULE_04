@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 13:15:44 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 09:08:23 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/01 13:40:44 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Character &			Character::operator= ( Character const & src ){
 		for (int i = 0; src.getMateria(i) != NULL; i++)
 			this->_inventory[i] = _inventory[i]->clone();
 	}
+	return (*this);
 }
 
 AMateria*			Character::getMateria( int idx ) const {
