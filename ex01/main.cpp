@@ -6,11 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:02:06 by hmickey           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/06/26 10:28:09 by hmickey          ###   ########.fr       */
-=======
-/*   Updated: 2021/06/16 20:50:53 by hmickey          ###   ########.fr       */
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+/*   Updated: 2021/07/01 10:58:23 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +15,6 @@
 #include "PlasmaRifle.hpp"
 #include "RadScorpion.hpp"
 #include "SuperMutant.hpp"
-<<<<<<< HEAD
 #include "Penetrator.hpp"
 #include <unistd.h>
 
@@ -111,29 +106,5 @@ int main(){
 	std::cout << *b;
 	sleep(2);
 
-=======
-
-int main(){
-	Character* me = new Character("me");
-	std::cout<<*me;
-
-	Enemy* b = new RadScorpion();
-
-	AWeapon* pr = new PlasmaRifle();
-	AWeapon* pf = new PowerFist();
-	
-	me->equip(pr);
-	std::cout << *me;
-	me->equip(pf);
-
-	me->attack(b);
-	std::cout << *me;
-	me->equip(pr);
-	std::cout << *me;
-	me->attack(b);
-	std::cout << *me;
-	me->attack(b);
-	std::cout << *me;
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
 	return 0;
 }

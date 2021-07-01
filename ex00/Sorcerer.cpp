@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 12:46:06 by hmickey           #+#    #+#             */
-/*   Updated: 2021/06/11 14:07:46 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/01 10:54:39 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ Sorcerer::Sorcerer (Sorcerer & src){
 }
 
 Sorcerer &	Sorcerer::operator = ( Sorcerer & src){
-	_name = src._name;
-	_title = src._title;
+	if (this != & src) {
+		_name = src._name;
+		_title = src._title;
+	}
 	return (*this);
 }
 
@@ -45,8 +47,4 @@ std::ostream & operator << ( std::ostream & o, Sorcerer & input){
 	return (o);
 }
 
-void		Sorcerer::polymorph( Victim const & src) const{
-	// std::cout<<_name<<" ("<<_title<<") "<<RESET;
-	// std::cout<<" polymorphed pitful victim "<<MAGENTA<<src.get_name()<<std::endl;
-	src.getPolymorphed();
-}
+void		Sorcerer::polymorph( Victim const & src) const{ src.getPolymorphed(); }

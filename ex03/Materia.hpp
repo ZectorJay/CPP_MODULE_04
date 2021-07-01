@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Peon.cpp                                           :+:      :+:    :+:   */
+/*   Materia.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/10 19:04:56 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 10:53:40 by hmickey          ###   ########.fr       */
+/*   Created: 2021/07/01 11:17:41 by hmickey           #+#    #+#             */
+/*   Updated: 2021/07/01 11:20:46 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Peon.hpp"
+#ifndef MATERIA_HPP
+# define MATERIA_HPP
+# include "AMateria.hpp"
 
-Peon::Peon( std::string name) : Victim(name) { std::cout<<"Zog Zog."<<std::endl; }
+// CHANGE CLASS ON ICE/CURE
+class Materia : public AMateria {
+	
+public:
 
-Peon::~Peon(){ std::cout<<"Bleuark..."<<std::endl; }
+	Materia()
+};
 
-void		Peon::getPolymorphed() const{
-	std::cout<<_name<<"  has been turned into a pink pony!"<<std::endl;
-}
+#endif

@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Peon.cpp                                           :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/10 19:04:56 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 10:53:40 by hmickey          ###   ########.fr       */
+/*   Created: 2021/07/01 11:21:20 by hmickey           #+#    #+#             */
+/*   Updated: 2021/07/01 11:29:48 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Peon.hpp"
+#include "AMateria.hpp"
 
-Peon::Peon( std::string name) : Victim(name) { std::cout<<"Zog Zog."<<std::endl; }
+AMateria::AMateria ( std::string const & type) : _xp(0), _type(type) {}
 
-Peon::~Peon(){ std::cout<<"Bleuark..."<<std::endl; }
+std::string const &	AMateria::getType() const { return (_type); }
 
-void		Peon::getPolymorphed() const{
-	std::cout<<_name<<"  has been turned into a pink pony!"<<std::endl;
-}
+unsigned int		AMateria::getXP() const { return (_xp); }

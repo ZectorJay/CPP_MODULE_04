@@ -6,11 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:11:03 by hmickey           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/06/26 10:11:46 by hmickey          ###   ########.fr       */
-=======
-/*   Updated: 2021/06/16 20:45:46 by hmickey          ###   ########.fr       */
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+/*   Updated: 2021/07/01 10:58:08 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +37,6 @@ void	Enemy::takeDamage( int amount ){
 	else{ 
 	_hp -= amount;
 	}
-<<<<<<< HEAD
 }
 
 std::ostream & operator << (std::ostream & o, Enemy const & src){
@@ -49,6 +44,4 @@ std::ostream & operator << (std::ostream & o, Enemy const & src){
 	o << src.getType() << " HP: " << src.getHP() << std::endl;
 	o << "\033[0m";
 	return (o);
-=======
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
 }
