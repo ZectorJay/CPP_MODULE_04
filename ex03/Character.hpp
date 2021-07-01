@@ -5,45 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/16 13:11:20 by hmickey           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/06/26 10:06:05 by hmickey          ###   ########.fr       */
-=======
-/*   Updated: 2021/06/16 18:46:29 by hmickey          ###   ########.fr       */
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+/*   Created: 2021/06/29 12:45:49 by hmickey           #+#    #+#             */
+/*   Updated: 2021/07/01 09:08:01 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
-# include "AWeapon.hpp"
-# include "Enemy.hpp"
+# include "ICharacter.hpp"
+# include "AMateria.hpp"
 
-class Character {
-
-public:
-
+class Character : public ICharacter {
+	
 	Character( std::string const & name );
 	~Character();
-	Character ( Character const & src);
+	Character ( Character & const src );
 
-	Character & operator = ( Character const & src );
-	void 		recoverAP();
-	void 		equip( AWeapon* weapon );
-	void 		attack( Enemy* target );
+	Character & 		operator= ( Character const & src );
 
-	std::string virtual getName() const;
-	AWeapon	* 			getWeapon() const;
-	int					getAp( ) const;
+	std::string	const &	getName() const;
+	void				equip ( AMateria* m );
+	void				unequip ( int idx );
+	void				use ( int idx, ICharacter & target );
+	AMateria*			getMateria( int idx ) const ;
+	
+private:
 
-protected:
-
-	Character();
-	int			_ap;
-	std::string	_name;
-	AWeapon		*_weapon;
+	std::string			_name;
+	AMateria*			_inventory[4];
 };
-
-std::ostream & operator << (std::ostream & o, Character const & src);
 
 #endif

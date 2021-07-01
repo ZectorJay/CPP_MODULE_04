@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.hpp                                      :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/15 10:35:27 by hmickey           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/06/26 05:20:34 by hmickey          ###   ########.fr       */
-=======
-/*   Updated: 2021/06/16 16:50:53 by hmickey          ###   ########.fr       */
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+/*   Created: 2021/06/27 10:03:05 by hmickey           #+#    #+#             */
+/*   Updated: 2021/07/01 09:10:34 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POWERFIST_HPP
-# define POWERFIST_HPP
-# include "AWeapon.hpp"
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
+# include <iostream>
 
-class PowerFist : public virtual AWeapon{
+class AMateria {
 
 public:
 
-	PowerFist();
-<<<<<<< HEAD
-	virtual ~PowerFist();
-=======
-	~PowerFist();
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+	explicit AMateria(std::string const & type);
+	virtual ~AMateria();
 
-	void attack() const;
+
+	std::string const & getType() const; //Returns the materia type
+	unsigned int getXP() const; //Returns the Materia's XP
+	virtual AMateria* clone() const = 0;
+	virtual void use( ICharacter &	target );
+
+private:
+
+	unsigned int _xp;
+
 };
 
 #endif

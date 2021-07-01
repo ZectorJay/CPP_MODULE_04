@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.hpp                                      :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/15 10:35:27 by hmickey           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/06/26 05:20:34 by hmickey          ###   ########.fr       */
-=======
-/*   Updated: 2021/06/16 16:50:53 by hmickey          ###   ########.fr       */
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+/*   Created: 2021/06/29 10:13:49 by hmickey           #+#    #+#             */
+/*   Updated: 2021/07/01 10:43:09 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POWERFIST_HPP
-# define POWERFIST_HPP
-# include "AWeapon.hpp"
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
+# include "AMateria.hpp"
 
-class PowerFist : public virtual AWeapon{
+class IMateriaSource
+{
 
 public:
 
-	PowerFist();
-<<<<<<< HEAD
-	virtual ~PowerFist();
-=======
-	~PowerFist();
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+	virtual ~IMateriaSource() {};
 
-	void attack() const;
+	virtual void		learnMateria(AMateria*) = 0;
+	virtual AMateria*	createMateria(std::string const & type) = 0;
+
 };
 
 #endif

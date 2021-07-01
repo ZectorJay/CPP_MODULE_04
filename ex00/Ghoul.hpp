@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.hpp                                      :+:      :+:    :+:   */
+/*   Ghoul.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/15 10:35:27 by hmickey           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/06/26 05:20:34 by hmickey          ###   ########.fr       */
-=======
-/*   Updated: 2021/06/16 16:50:53 by hmickey          ###   ########.fr       */
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+/*   Created: 2021/06/26 10:29:57 by hmickey           #+#    #+#             */
+/*   Updated: 2021/06/26 10:32:55 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POWERFIST_HPP
-# define POWERFIST_HPP
-# include "AWeapon.hpp"
+#ifndef GHOUL_HPP
+# define GHOUL_HPP
+# include "Victim.hpp"
 
-class PowerFist : public virtual AWeapon{
+class Ghoul : public Victim {
 
 public:
 
-	PowerFist();
-<<<<<<< HEAD
-	virtual ~PowerFist();
-=======
-	~PowerFist();
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+	Ghoul( std::string name );
+	virtual ~Ghoul();
 
-	void attack() const;
+	void	getPolymorphed() const;
+	
 };
 
 #endif

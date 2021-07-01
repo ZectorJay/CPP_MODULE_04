@@ -6,7 +6,11 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 18:49:22 by hmickey           #+#    #+#             */
+<<<<<<< HEAD
+/*   Updated: 2021/06/26 10:06:47 by hmickey          ###   ########.fr       */
+=======
 /*   Updated: 2021/06/16 16:52:44 by hmickey          ###   ########.fr       */
+>>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +40,12 @@ int			AWeapon::getAPCost() const { return (_apcost); }
 
 int			AWeapon::getDamage() const { return (_damage); }
 
+<<<<<<< HEAD
+std::ostream &	operator<<( std::ostream & o, AWeapon const & i){
+	o << CYAN << "Current weapon have: "<< RED << i.getDamage();
+	o << CYAN << " damage and strike cost " << YELLOW << i.getAPCost();
+	o << RESET << std::endl;
+	return (o);
+}
+=======
+>>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3

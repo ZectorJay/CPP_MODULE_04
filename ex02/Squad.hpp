@@ -6,7 +6,11 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 03:23:07 by hmickey           #+#    #+#             */
+<<<<<<< HEAD
+/*   Updated: 2021/06/26 04:57:37 by hmickey          ###   ########.fr       */
+=======
 /*   Updated: 2021/06/26 03:54:49 by hmickey          ###   ########.fr       */
+>>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +23,11 @@ class Squad : public ISquad {
 
 public:
 
+<<<<<<< HEAD
+	Squad();
+=======
 	Squad() : _units(NULL), _size(0) {};
+>>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
 	virtual ~Squad();
 	Squad( Squad const & src ) { *this = src; };
 

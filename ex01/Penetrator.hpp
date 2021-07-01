@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.hpp                                      :+:      :+:    :+:   */
+/*   Penetrator.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/15 10:35:27 by hmickey           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/06/26 05:20:34 by hmickey          ###   ########.fr       */
-=======
-/*   Updated: 2021/06/16 16:50:53 by hmickey          ###   ########.fr       */
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+/*   Created: 2021/06/26 05:19:17 by hmickey           #+#    #+#             */
+/*   Updated: 2021/06/26 09:11:32 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POWERFIST_HPP
-# define POWERFIST_HPP
+#ifndef PENETRATOR_HPP
+# define PENETRATOR_HPP
 # include "AWeapon.hpp"
 
-class PowerFist : public virtual AWeapon{
-
+class Penetrator : public AWeapon {
+	
 public:
 
-	PowerFist();
-<<<<<<< HEAD
-	virtual ~PowerFist();
-=======
-	~PowerFist();
->>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
+	Penetrator();
+	virtual ~Penetrator(){};
 
 	void attack() const;
 };

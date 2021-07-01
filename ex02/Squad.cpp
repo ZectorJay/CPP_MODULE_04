@@ -6,14 +6,26 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 23:03:14 by hmickey           #+#    #+#             */
+<<<<<<< HEAD
+/*   Updated: 2021/06/26 05:04:47 by hmickey          ###   ########.fr       */
+=======
 /*   Updated: 2021/06/26 03:54:00 by hmickey          ###   ########.fr       */
+>>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Squad.hpp"
 
+<<<<<<< HEAD
+Squad::Squad() : _units(NULL), _size(0) {
+	std::cout<<"Squad has been deployed"<<std::endl;
+}
+
+Squad::~Squad(){
+=======
 Squad::~Squad(){
 	std::cout<<"DESTRUCTION!"<<std::endl;
+>>>>>>> b9daaa87a7fde72c92b21aa7b09ef6225afbbaa3
 	if ( _size > 0 ){
 		for ( int i = 0; i < _size ; i++ )
 			delete _units[i];
