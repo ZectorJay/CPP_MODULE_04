@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 12:45:49 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 13:41:22 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/02 10:21:02 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ public:
 	
 private:
 
+	Character(){};
 	std::string			_name;
 	AMateria*			_inventory[4];
 };

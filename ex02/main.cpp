@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 03:16:43 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/01 10:57:15 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/02 10:56:21 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	test(){
 	
 	std::cout<<GREEN<<"let's create 2 different squads"<<RESET<<std::endl;
 	sleep(2);
-	Squad*  destroyers = new Squad;
-	Squad* destroyers2 = new Squad;
+	ISquad*  destroyers = new Squad;
+	ISquad* destroyers2 = new Squad;
 	sleep(2);
 	
 	std::cout<<BLUE<<"Now we push 2 Tactical Marine into first squad"<<RESET<<std::endl;
@@ -49,7 +49,7 @@ void	test(){
 	sleep(2);
 	std::cout<<RED<<"Now let's try to deep copy from 2nd squad to the first"<<RESET<<std::endl;
 	sleep(2);
-	*destroyers = *destroyers2;
+	*(static_cast<Squad *>(destroyers)) = *(static_cast<Squad *>(destroyers2));
 	sleep(2);
 	std::cout<<GREEN<<"Old units were freed and units from 2nd squad were copied on their place";
 	std::cout<<RESET<<std::endl;
